@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>cambiarValores</class>
+ <widget class="QWidget" name="cambiarValores">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>346</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>FondoTrabajadoresUnidos(Empleado)</string>
+  </property>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>310</y>
+     <width>75</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Guardar</string>
+   </property>
+  </widget>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>70</y>
+     <width>341</width>
+     <height>223</height>
+    </rect>
+   </property>
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="7" column="1" colspan="2">
+     <widget class="QSpinBox" name="auxilio">
+      <property name="maximum">
+       <number>900000000</number>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="1" colspan="2">
+     <widget class="QSpinBox" name="scoring">
+      <property name="maximum">
+       <number>99999999</number>
+      </property>
+     </widget>
+    </item>
+    <item row="7" column="0">
+     <widget class="QLabel" name="label_8">
+      <property name="text">
+       <string>Maximo monto de auxilio permitido:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1" colspan="2">
+     <widget class="QDoubleSpinBox" name="salarioMinimo">
+      <property name="maximum">
+       <double>10000000000000000905969664.000000000000000</double>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QLabel" name="label_2">
+      <property name="text">
+       <string>Pago de la administracion:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="1" colspan="2">
+     <widget class="QDoubleSpinBox" name="SeguroVida">
+      <property name="maximum">
+       <double>100.000000000000000</double>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1" colspan="2">
+     <widget class="QDoubleSpinBox" name="pagoAdmi">
+      <property name="maximum">
+       <double>100000000000000000000.000000000000000</double>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="0">
+     <widget class="QLabel" name="label_5">
+      <property name="text">
+       <string>IVA: </string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="1" colspan="2">
+     <widget class="QDoubleSpinBox" name="iva">
+      <property name="maximum">
+       <double>100.000000000000000</double>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0">
+     <widget class="QLabel" name="label_3">
+      <property name="text">
+       <string>Seguro de vida:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="0">
+     <widget class="QLabel" name="label_6">
+      <property name="text">
+       <string>Tasa de interes:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="0">
+     <widget class="QLabel" name="label_4">
+      <property name="text">
+       <string>Uso de plataforma:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="1" colspan="2">
+     <widget class="QDoubleSpinBox" name="UsoPlataforma">
+      <property name="maximum">
+       <double>100000000000000000000.000000000000000</double>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="1" colspan="2">
+     <widget class="QDoubleSpinBox" name="interes">
+      <property name="maximum">
+       <double>100.000000000000000</double>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="0">
+     <widget class="QLabel" name="label_7">
+      <property name="text">
+       <string>Scoring</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="0">
+     <widget class="QLabel" name="label">
+      <property name="text">
+       <string>Salario minimo vigente:</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

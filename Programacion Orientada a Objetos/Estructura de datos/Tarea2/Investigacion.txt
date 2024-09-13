@@ -1,0 +1,11 @@
+//ALEJANDRO HERNANDEZ
+//CARLOS PALOMEQUE
+
+
+La herencia multiple se implementa poniendo public normal mente pero despues de ese una compra y otra vez public mas la clase, asi hasta la cantidad de clases que se quieran heredar. Pero tambien se debe de tener en cuenta el uso de sus funciones ya que a veces pueden alterar el resultado o generar un error de ambiguedad.
+
+En nuestro caso la clase empleado_estudiante hereda a estudiante y a empleado las cuales herendan de persona obteniendo todos los atributos y metodos de las clases.
+
+Alejandro Hernandez
+Carlos Palomeque
+

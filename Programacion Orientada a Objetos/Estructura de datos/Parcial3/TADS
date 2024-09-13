@@ -1,0 +1,69 @@
+TADS
+
+TAD arista:
+	*Variables: int tiempoVuelvo,int distancia,vertice aeropuertoOrigen,vertice aeropuertoDestino, string aerolinea.
+	*Funciones:
+		-crearArista(tiempoVuelo,distancia, aeropuertoOrigen,aeropuertoDestino, aerolinea)-> nuevaArista
+			precondicion:
+				¬Deben de haber mas de 2 vertices
+				¬tiempoVuelo>0
+				¬distancia > 0
+			postcondicion:
+				¬Crea una nueva arista
+
+TAD vertice:
+	*Variables: string ciudad, int franjaHoraria, int coordenadas[2].
+	*Funciones:
+		-crearVertice(ciudad,franjaHoraria,int coordenadax,int cordenaday0)->nuevoVertice
+			precondicion:
+				¬ciudad debe tener 3 letras
+			postcondicion:
+				¬Crea un nuevo vertice.
+
+
+TAD grafo:
+	*Variables: int numAeropuertos
+	*Funciones:
+		-agregarAeropuerto(verticeNuevo)->grafo
+			postcondicion:
+				¬numAeropuertos +1
+		-crearVuelo(aeropuerto1,aeropuerto2)->bool
+			precondicion:
+				¬numVertices > 2
+			postcondiciones:
+				¬return crearArista(tiempoVuelo,distancia, aeropuertoOrigen,aeropuertoDestino,aerolinea)
+		-numCaminosPosibles(vertice)
+			precondicion:
+				¬numAristas > 0
+			postcondicion:
+				¬Retorna el numero de aristas hacia las que se puede mover
+		-menorAristaTiempo(aeropuertoOrigen)
+		-aristasConectadas(aeropuertoOrigen)
+		-menorAristaDistancia(aeropuertoOrigen)
+		-caminoAerolinea()
+		-buscarRutaAerolinea(aeropuertoOrigen,aeropuertoDestino,aerolinea)
+
+TAD Parcial3:
+	*Funciones:
+		-tiempoMinimo(aeropuertoOrigen, aeropuertoDestino, Lista posibleRuta)
+			precondicion:
+				¬El aeropuertoOrigen y aeropuertoDestino deben de pertenecer al grafo
+			postcondicion:
+				¬Retorna una lista con la ruta con menor tiempo
+		-escalasMinimas(aeropuertoOrigen, aeropuertoDestino, Lista posibleRuta)
+			precondicion:
+				¬El aeropuertoOrigen y aeropuertoDestino deben de pertenecer al grafo
+			postcondicion:
+				¬Retorna una lista con la menor cantidad de escalas
+		-distanciaMinima(aeropuertoOrigen, aeropuertoDestino, Lista posibleRuta)
+			precondicion:
+				¬El aeropuertoOrigen y aeropuertoDestino deben de pertenecer al grafo
+			postcondicion:
+				¬Retorna una lista con la ruta con la distancia minima
+
+
+
+
+
+
+		

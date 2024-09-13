@@ -1,0 +1,39 @@
+Bienvenido al FondoTrabajadoresUnidos!
+
+Es un placer tenerlo como afiliado, en el fondo usted prodra disfrutar todos los beneficios que el tiene. 
+
+-Podra pedir creditos para sus gustos, tambien podra simular para ver en cuantas cuotas mensuales del credito que necesita.
+
+-Podra pedir auxilios en caso de una calamidad domestica o un auxilio educativo para cualquier miembro de su familia.
+
+-Podra crear una cuanta de ahorro y descontar de su salario para ahorrar libremente de impuestos.
+
+Registro:
+	1- Si no tiene una cuenta vaya al boton de registro.
+	2- Ingrese todos los datos.
+	3-Presione "Hecho!".
+	4- Listo! ya puede disfrutar de los beneficios del fondo.
+
+Credito:
+	1-Ingrese su usuario y su contraseña.
+	2- Presione la opcion "Credito".
+	3- Si desea generar una solicitud de credito ingrese los datos necesarios y presione
+	boton "Generar solicitud de credito"
+	4- Si desea ver sus creditos solicitados y el estado de ellos puede ir a la opcion de 	"Mis creditos".
+	5- Si desea simular un credito vaya a "Simular credito" y ingrese los valores 		necesarios para este.
+
+Auxilio:
+	1-Ingrese su usuario y su contraseña.
+	2- Presione la opcion "Auxilio".
+	3- Ingrese los datos necesarios para un auxilio.
+	4- Presione "Solicitar auxilio" para generar la solitud al fondo.
+	5- si desea ver los auxilios que ha solicitado y el estado en el que estan presione
+	"Mis auxilios".
+
+Ahorro:
+	1-Ingrese su usuario y su contraseña.
+	2- Presione la opcion "Auxilio".
+	3- digite los datos necesarios para la solicitud.
+	4- Presione "Ahorrar!" para en caso de que sea la primera vez crea su cuenta e 			ingresa lo ahorrado, si no solo lo adiciona.
+	5- si desea ver los ahorros que ha solicitado y el estado en el que estan presione
+	"Mis ahorros".

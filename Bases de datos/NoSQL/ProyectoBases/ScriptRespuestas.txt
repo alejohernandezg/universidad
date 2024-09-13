@@ -1,0 +1,53 @@
+1) Dado el número de identificación de un cliente, listar su nombre y dirección 
+
+SELECT ?Nombre ?Direccion WHERE {   
+  xs:1144099495 rdf:Nombre  ?Nombre .   
+  OPTIONAL { xs:1144099495 rdf:Direccion  ?Direccion } . 
+} 
+
+2) Dado el número de identificación de un cliente, listar los números de líneas
+telefónicas que tiene registradas
+
+SELECT ?Telefono WHERE {   
+  OPTIONAL { xs:1144099495 rdf:Telefono  ?Telefono } . 
+} 
+
+3) Datos de la factura de un número de teléfono y una fecha dada
+
+SELECT ?Megabytes ?ConsumoVoz ?ValorMensual WHERE {   
+  OPTIONAL { 
+    xs:3178556488 rdf:Factura  ?FacturaNombre .
+    ?FacturaNombre rdf:Fecha xs:2017-09-19 .
+    ?FacturaNombre rdf:ConsumoVoz ?ConsumoVoz .
+    ?FacturaNombre rdf:Megabytes ?Megabytes .
+    ?FacturaNombre rdf:ValorMensual ?ValorMensual .
+  } . 
+} 
+
+4) Dado el número de identificación de un cliente, listar el valor a pagar de la
+factura más reciente para cada teléfono que el cliente tiene registrado
+
+SELECT ?Fecha WHERE {   
+  OPTIONAL {
+    xs:1144099495 rdf:Telefono  ?Telefono .
+    ?Telefono rdf:Factura  ?Factura .
+    ?Factura rdf:Fecha ?Fecha .
+  } . 
+} 
+ORDER BY DESC(?Fecha)
+             Limit 1
+
+5) Dado el número de identificación de un cliente, listar los nombres y
+números de teléfono de los amigos de los amigos de ese cliente 
+
+SELECT ?Nombre ?TelefonoAmigoAmigo WHERE {   
+  OPTIONAL {
+    xs:1144099495 rdf:Telefono ?Telefono .
+    ?Telefono rdf:Amigo ?TelefonoAmigo .
+    
+    ?TelefonoAmigo rdf:Amigo ?TelefonoAmigoAmigo .
+
+    ?Identificacion  rdf:Telefono ?TelefonoAmigoAmigo.
+    ?Identificacion  rdf:Nombre ?Nombre .
+  } . 
+} 

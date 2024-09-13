@@ -1,0 +1,87 @@
+
+-- a) Cambie el nombre de la ciudad con código 8001, asigne como nombre ‘QUITO’
+
+UPDATE Ciudad SET nombreCiudad='Quito' WHERE codCiudad='8001';
+
+-- b) Actualice la fecha de facturación de los períodos del año 2015, asigne la fecha de fin de período más 2 dias
+
+UPDATE Periodo SET fechaFacturacion=fechaFinPeriodo + 2 WHERE EXTRACT(year from fechaFacturacion)='2015';
+
+-- 2) Borre los registros de consumoDatos del 6 de enero de 2013 
+
+DELETE FROM consumoDatos WHERE fecha='2013-01-06';
+
+-- a) Cambiar en las tablas Telefono y planTelefono el nombre del atributo ID por IDCliente; y en la tabla Factura el nombre del atributo idPlanTel por idPlanTelefono
+
+ALTER TABLE Telefono RENAME COLUMN ID TO IDCliente;
+ALTER TABLE planTelefono RENAME COLUMN ID TO IDCliente;
+ALTER TABLE Factura RENAME COLUMN idPlanTel TO idPlanTelefono;
+
+-- b) En la tabla período agregue la restricción de que la fecha de facturación es mayor o igual a la fecha de final de período
+
+ALTER TABLE 
+Periodo 
+ADD CHECK(fechaFacturacion >= fechaFinPeriodo);
+
+-- 4) Seleccionar el número y valor a pagar de las facturas del período 155
+
+SELECT
+nroFactura,valorAPagar 
+FROM 
+Factura 
+WHERE 
+idPeriodo='155';
+
+-- 5) Seleccione los diferentes estados de PlanTelefono cuya fechaFin es nula (Use cláusulas DISTINCT y consulte las operaciones de comparación para identificar cómo comparar con valores nulos)
+
+SELECT
+DISTINCT estado
+FROM
+PlanTelefono
+WHERE
+FechaFin IS NULL; 
+
+-- 6) Seleccionar el nombre, apellido, dirección y número de línea de los clientes que viven en ‘CALI’ y tienen un teléfono registrado en el año 2016 y que sigue activo (consultar las funciones de fecha y hora en la Parte II, Capítulo 9)
+
+SELECT 
+nombre,apellido,direccion
+FROM
+cliente NATURAL JOIN ciudad INNER JOIN Telefono ON(ID=IDCliente)
+WHERE
+Ciudad.nombreCiudad='Cali' AND EXTRACT(YEAR FROM telefono.fechaRegistro) = 2016 AND telefono.estado='A';
+
+-- 7) Seleccionar la fecha de facturación, la fecha de inicio de período, la fecha de fin de período, la fecha de pago y el valor a pagar de la factura número 1108
+
+SELECT
+periodo.fechaFacturacion,periodo.fechaInicioPeriodo,periodo.fechaFinPeriodo,periodo.fechaPago
+FROM
+Factura NATURAL JOIN Periodo
+WHERE
+nroFactura=1108;
+
+-- 8) Listar los planes de teléfono de los teléfonos registrados en el año 2016. Listar el número de línea, id del plan de teléfono, la descripción del plan (tipo de plan, máximo de minutos y de gigabytes, y valor por mes), y la fecha de inicio.
+
+SELECT
+telefono.numeroLinea,planTelefono.IDPlantel,Plan.tipoPlan,Plan.maxMinutos,Plan.maxGigaB,Plan.valorMes
+FROM
+Telefono INNER JOIN PlanTelefono USING(IMEI,IDCliente) NATURAL JOIN Plan
+WHERE
+EXTRACT(YEAR FROM PlanTelefono.fechaInicio)=2016;
+
+-- 9) Para la factura número 1483 seleccione la fecha y cantidad de segundos de los consumos de voz realizados en el período de la factura en el plan de teléfono correspondiente. 
+
+SELECT
+consumoVoz.fecha,consumoVoz.segundos
+FROM
+(Factura NATURAL JOIN Periodo) INNER JOIN PlanTelefono ON(IDPlanTelefono=IDPlanTel) INNER JOIN consumoVoz USING(IDPlantel)
+WHERE
+Factura.nroFactura=1483 AND consumoVoz.IDPeriodo=Periodo.IDPeriodo;
+
+-- 10) Listar las facturas del año 2017 de las líneas del cliente ‘Bette’ ‘Imeson’. Listar el número de línea, el número de factura y el valor a pagar.
+
+SELECT
+numeroLinea,nroFactura,valorAPagar
+FROM
+cliente INNER JOIN Telefono ON(ID=IDCliente) INNER JOIN PlanTelefono USING(IMEI,IDCliente) INNER JOIN Factura ON(IDPlantel=IDPlanTelefono)
+WHERE
+Cliente.nombre='Bette' AND Cliente.apellido='Imeson' AND EXTRACT(YEAR FROM Telefono.fechaRegistro)=2017;

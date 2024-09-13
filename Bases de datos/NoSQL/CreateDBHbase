@@ -1,0 +1,76 @@
+create 'TweetsBD03', 'General', 'Messages'
+
+
+//User:fpyser1
+put 'TweetsBD03', 'fpyser1', 'General:Password', 'XWTaWCLRWT' 
+put 'TweetsBD03', 'fpyser1', 'General:', 'Active'
+put 'TweetsBD03', 'fpyser1', 'General:Type', 'Private'
+put 'TweetsBD03', 'fpyser1', 'General:City', 'Cali'
+
+
+put 'TweetsBD03', 'fpyser1', 'Messages:Tweet1', '{ "Tipo": "Nr", "Texto"; "In blandit ultrices enim.", "Hashtag": "monitoring", "fecha": "31/10/2016 8:11" }'
+
+put 'TweetsBD03', 'fpyser1', 'Messages:Tweet2', '{ "Tipo": "Rp", "Texto"; "Nulla tempus.", "Hashtag": "Pre-emptive", "fecha": "24/01/2017 8:05", "Emisor": "ejillinsb" }'
+
+put 'TweetsBD03', 'fpyser1', 'Messages:Tweet3', '{ "Tipo": "Rt", "Texto"; "Nam nulla.", "Hashtag": "Robust", "fecha": "25/09/2017 15:53", "Emisor": "jgarbettj" }'
+
+put 'TweetsBD03', 'fpyser1', 'Messages:Tweet4', '{ "Tipo": "Rt", "Texto"; "Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla.", "Hashtag": "Realigned", "fecha": "16/01/2017 4:08", "Emisor": "jgarbettj" }'
+
+put 'TweetsBD03', 'fpyser1', 'Messages:Tweet5', '{ "Tipo": "Nr", "Texto"; "Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo.", "Hashtag": "Realigned", "fecha": "25/09/2017 15:53" }'
+
+
+//User:ejillinsb
+put 'TweetsBD03', 'ejillinsb', 'General:Password', 'usix7rTjtFiS' 
+put 'TweetsBD03', 'ejillinsb', 'General:', 'Active'
+put 'TweetsBD03', 'ejillinsb', 'General:Type', 'Public'
+put 'TweetsBD03', 'ejillinsb', 'General:City', 'Cali'
+
+
+put 'TweetsBD03', 'ejillinsb', 'Messages:Tweet1', '{ "Tipo": "Nr", "Texto"; "Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.", "Hashtag": "analyzing", "fecha": "20/03/2016 4:15" }'
+
+put 'TweetsBD03', 'ejillinsb', 'Messages:Tweet2', '{ "Tipo": "Nr", "Texto"; "In sagittis dui vel nisl.", "Hashtag": "Up-sized", "fecha": "24/11/2016 21:26" }'
+
+put 'TweetsBD03', 'ejillinsb', 'Messages:Tweet3', '{ "Tipo": "Nr", "Texto"; "Etiam justo.", "Hashtag": "De-engineered", "fecha": "13/05/2017 8:25" }'
+
+put 'TweetsBD03', 'ejillinsb', 'Messages:Tweet4', '{ "Tipo": "Nr", "Texto"; "Nunc rhoncus dui vel sem.", "Hashtag": "capability", "fecha": "25/10/2016 9:26" }'
+
+put 'TweetsBD03', 'ejillinsb', 'Messages:Tweet5', '{ "Tipo": "Nr", "Texto"; "In eleifend quam a odio.", "Hashtag": "Ergonomic", "fecha": "13/11/2017 21:03" }'
+
+
+//User:gmunroec
+put 'TweetsBD03', 'gmunroec', 'General:Password', 'alGGQry0bz9i' 
+put 'TweetsBD03', 'gmunroec', 'General:', 'Inactive'
+put 'TweetsBD03', 'gmunroec', 'General:Type', 'Public'
+put 'TweetsBD03', 'gmunroec', 'General:City', 'Bogota'
+
+
+put 'TweetsBD03', 'gmunroec', 'Messages:Tweet1', '{ "Tipo": "Dr", "Texto"; "Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue.", "Hashtag": "full-range", "fecha": "20/03/2016 4:15", "Receptor": "fpyser1" }'
+
+put 'TweetsBD03', 'gmunroec', 'Messages:Tweet2', '{ "Tipo": "Dr", "Texto"; "Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.", "Hashtag": "full-range", "fecha": "04/09/2017 17:01", "Receptor": "ginkpinx" }'
+
+put 'TweetsBD03', 'gmunroec', 'Messages:Tweet3', '{ "Tipo": "Nr", "Texto"; "Integer tincidunt ante vel ipsum.", "Hashtag": "Digitized", "fecha": "25/10/2016 9:26" }'
+
+put 'TweetsBD03', 'gmunroec', 'Messages:Tweet4', '{ "Tipo": "Nr", "Texto"; "Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.", "Hashtag": "bandwidth-monitored", "fecha": "11/08/2017 7:23" }'
+
+
+//User:ginkpinx
+put 'TweetsBD03', 'ginkpinx', 'General:Password', 'gURgcj' 
+put 'TweetsBD03', 'ginkpinx', 'General:', 'Active'
+put 'TweetsBD03', 'ginkpinx', 'General:Type', 'Private'
+put 'TweetsBD03', 'ginkpinx', 'General:City', 'Cali'
+
+
+put 'TweetsBD03', 'ginkpinx', 'Messages:Tweet1', '{ "Tipo": "Re", "Texto"; "Mauris lacinia sapien quis libero.", "Hashtag": "framework", "fecha": "05/08/2017 6:37", "Emisor": "jgarbettj" }'
+
+put 'TweetsBD03', 'ginkpinx', 'Messages:Tweet2', '{ "Tipo": "Dr", "Texto"; "Quisque porta volutpat erat.", "Hashtag": "web-enabled", "fecha": "22/06/2017 1:32", "Receptor": "gmunroec" }'
+
+
+//User:jgarbettj
+put 'TweetsBD03', 'jgarbettj', 'General:Password', '2TQ38MCc' 
+put 'TweetsBD03', 'jgarbettj', 'General:', 'Active'
+put 'TweetsBD03', 'jgarbettj', 'General:Type', 'Public'
+put 'TweetsBD03', 'jgarbettj', 'General:City', 'Medellin'
+
+put 'TweetsBD03', 'jgarbettj', 'Messages:Tweet1', '{ "Tipo": "Dr", "Texto"; "Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo.", "Hashtag": "parallelism", "fecha": "20/03/2016 4:15", "Receptor": "gmunroec" }'
+
+

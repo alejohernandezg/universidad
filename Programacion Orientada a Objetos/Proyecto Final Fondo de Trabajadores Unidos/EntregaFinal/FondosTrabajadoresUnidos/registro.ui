@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Registro</class>
+ <widget class="QWidget" name="Registro">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>396</width>
+    <height>500</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Registro</string>
+  </property>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>80</y>
+     <width>355</width>
+     <height>411</height>
+    </rect>
+   </property>
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="12" column="3" colspan="4">
+     <widget class="QLineEdit" name="password"/>
+    </item>
+    <item row="1" column="0">
+     <widget class="QLabel" name="label">
+      <property name="text">
+       <string>Nombre:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1" colspan="5">
+     <widget class="QLineEdit" name="nombre"/>
+    </item>
+    <item row="7" column="2" colspan="3">
+     <widget class="QComboBox" name="sexo">
+      <item>
+       <property name="text">
+        <string>Seleccione...</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Hombre</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Mujer</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="6" column="0" colspan="4">
+     <widget class="QLabel" name="label_6">
+      <property name="text">
+       <string>Correo electronico:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="0" colspan="8">
+     <widget class="Line" name="line_2">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="13" column="0" colspan="8">
+     <widget class="Line" name="line">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="4" colspan="4">
+     <widget class="QLineEdit" name="correo"/>
+    </item>
+    <item row="8" column="0" colspan="2">
+     <widget class="QLabel" name="label_8">
+      <property name="text">
+       <string>Estado civil:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="0" colspan="5">
+     <widget class="QLabel" name="label_5">
+      <property name="text">
+       <string>Tarjeta de credito(opcional):</string>
+      </property>
+     </widget>
+    </item>
+    <item row="10" column="0">
+     <widget class="QLabel" name="label_10">
+      <property name="text">
+       <string>Celular:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="11" column="0">
+     <widget class="QLabel" name="label_11">
+      <property name="text">
+       <string>Usuario:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="11" column="2" colspan="4">
+     <widget class="QLineEdit" name="usuario"/>
+    </item>
+    <item row="2" column="1" colspan="5">
+     <widget class="QLineEdit" name="apellido"/>
+    </item>
+    <item row="15" column="7">
+     <widget class="QPushButton" name="pushButton_2">
+      <property name="text">
+       <string>Hecho!</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="0" colspan="4">
+     <widget class="QLabel" name="label_3">
+      <property name="text">
+       <string>Fecha de nacimiento:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="9" column="0">
+     <widget class="QLabel" name="label_9">
+      <property name="text">
+       <string>Direccion:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="1" colspan="5">
+     <widget class="QLineEdit" name="cedula"/>
+    </item>
+    <item row="3" column="5" colspan="2">
+     <widget class="QDateEdit" name="fechaNacimiento">
+      <property name="dateTime">
+       <datetime>
+        <hour>23</hour>
+        <minute>59</minute>
+        <second>59</second>
+        <year>1998</year>
+        <month>12</month>
+        <day>31</day>
+       </datetime>
+      </property>
+      <property name="maximumDate">
+       <date>
+        <year>1998</year>
+        <month>12</month>
+        <day>31</day>
+       </date>
+      </property>
+      <property name="minimumDate">
+       <date>
+        <year>1920</year>
+        <month>1</month>
+        <day>1</day>
+       </date>
+      </property>
+     </widget>
+    </item>
+    <item row="15" column="0" colspan="3">
+     <widget class="QPushButton" name="pushButton">
+      <property name="text">
+       <string>Atras</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0">
+     <widget class="QLabel" name="label_2">
+      <property name="text">
+       <string>Apellido:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="6" colspan="2">
+     <widget class="QLineEdit" name="tarjetaCredito"/>
+    </item>
+    <item row="9" column="2" colspan="4">
+     <widget class="QLineEdit" name="direccion"/>
+    </item>
+    <item row="10" column="1" colspan="5">
+     <widget class="QLineEdit" name="celular">
+      <property name="inputMethodHints">
+       <set>Qt::ImhNone</set>
+      </property>
+     </widget>
+    </item>
+    <item row="8" column="3" colspan="3">
+     <widget class="QComboBox" name="estadoCivil">
+      <item>
+       <property name="text">
+        <string>Seleccione...</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Soltero</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Casado</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Viudo</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Otro</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="12" column="0" colspan="2">
+     <widget class="QLabel" name="label_12">
+      <property name="text">
+       <string>Contraseña:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="0">
+     <widget class="QLabel" name="label_4">
+      <property name="text">
+       <string>Cedula:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="7" column="0">
+     <widget class="QLabel" name="label_7">
+      <property name="text">
+       <string>Sexo:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="14" column="0">
+     <spacer name="verticalSpacer">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>40</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QLabel" name="label_13">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>10</y>
+     <width>401</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial Black</family>
+     <pointsize>10</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>FONDO TRABAJADORES UNIDOS: Registro</string>
+   </property>
+  </widget>
+  <widget class="Line" name="line_3">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>50</y>
+     <width>361</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+ </widget>
+ <tabstops>
+  <tabstop>nombre</tabstop>
+  <tabstop>apellido</tabstop>
+  <tabstop>fechaNacimiento</tabstop>
+  <tabstop>cedula</tabstop>
+  <tabstop>tarjetaCredito</tabstop>
+  <tabstop>correo</tabstop>
+  <tabstop>sexo</tabstop>
+  <tabstop>estadoCivil</tabstop>
+  <tabstop>direccion</tabstop>
+  <tabstop>celular</tabstop>
+  <tabstop>usuario</tabstop>
+  <tabstop>password</tabstop>
+  <tabstop>pushButton</tabstop>
+  <tabstop>pushButton_2</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>

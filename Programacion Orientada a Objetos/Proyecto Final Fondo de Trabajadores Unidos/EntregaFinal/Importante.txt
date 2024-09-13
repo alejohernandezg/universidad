@@ -1,0 +1,8 @@
+Profe:
+
+	El usuario para entrar como empleado es:
+		Usuario: alejo
+		contraseña:1234
+	
+No alcance a hacer los UML, si quieres te los puedo presentar el dia de la sustentacion.
+Gracias.

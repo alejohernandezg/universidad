@@ -1,0 +1,230 @@
+@prefix  res:   <http://example.com/resource/> .
+
+@prefix  ex:    <http://example.com/> .
+
+@prefix  class: <http://example.com/class/> .
+
+@prefix  prop:  <http://example.com/property/> .
+
+@prefix  rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+
+res:Pais1 rdf:type class:Pais .
+res:Pais1 prop:nombre "Colombia" .
+
+res:Pais2 rdf:type class:Pais .
+res:Pais2 prop:nombre "Francia" .
+
+res:Ciudad1 rdf:type class:Ciudad .
+res:Ciudad1 prop:nombre "Cali" .
+res:Ciudad1 prop:pais res:Pais1 .
+
+res:Ciudad2 rdf:type class:Ciudad .
+res:Ciudad2 prop:nombre "Bogota" .
+res:Ciudad2 prop:pais res:Pais1 .
+
+res:Ciudad3 rdf:type class:Ciudad .
+res:Ciudad3 prop:nombre "Paris" .
+res:Ciudad3 prop:pais res:Pais2 .
+
+
+
+res:Hashtag1 rdf:type class:Hashtag .
+res:Hashtag1 prop:nombre "hierarchy" .
+
+res:Hashtag2 rdf:type class:Hashtag .
+res:Hashtag2 prop:nombre "Pre-emptive" .
+
+res:Hashtag3 rdf:type class:Hashtag .
+res:Hashtag3 prop:nombre "monitoring" .
+
+res:Hashtag4 rdf:type class:Hashtag .
+res:Hashtag4 prop:nombre "multi-tasking" .
+
+res:Hashtag5 rdf:type class:Hashtag .
+res:Hashtag5 prop:nombre "homogeneous" .
+
+
+res:Usuario1 rdf:type class:Usuario .
+res:Usuario1 prop:nombreUsuario "fpyser1" .
+res:Usuario1 prop:clave "XWTaWCLRWT" .
+res:Usuario1 prop:fechaRegistro "2017-12-06"^^xsd:date .
+res:Usuario1 prop:tipoPerfil "Privado"  .
+res:Usuario1 prop:estado "Activo"  .
+res:Usuario1 prop:ciudad res:Ciudad1 .
+
+res:Usuario1 prop:sigueA res:Usuario2 .
+res:Usuario1 prop:sigueA res:Usuario3 .
+
+
+
+
+res:Usuario1 prop:escribe res:Mensaje1 .
+res:Mensaje1 rdf:type class:Mensaje .
+res:Mensaje1 prop:texto "In blandit ultrices enim." .
+res:Mensaje1 prop:tipoTweet "Normal" .
+res:Mensaje1 prop:fecha "2018-12-06"^^xsd:date .
+res:Mensaje1 prop:hashtag res:Hashtag1 .
+
+
+res:Usuario1 prop:escribe res:Mensaje2 .
+res:Mensaje2 rdf:type class:Mensaje .
+res:Mensaje2 prop:texto "Praesent blandit lacinia erat." .
+res:Mensaje2 prop:tipoTweet "Directed" .
+res:Mensaje2 prop:fecha "2018-11-05"^^xsd:date .
+res:Mensaje2 prop:hashtag res:Hashtag2 .
+res:Mensaje2 prop:destino res:Usuario2 .
+
+res:Usuario1 prop:escribe res:Mensaje3 .
+res:Mensaje3 rdf:type class:Mensaje .
+res:Mensaje3 prop:tipoTweet "Retweet" .
+res:Mensaje3 prop:fecha "2018-08-20"^^xsd:date .
+res:Mensaje3 prop:hashtag res:Hashtag3.
+res:Mensaje3 prop:tweetOriginal res:Mensaje6 . 
+
+res:Usuario1 prop:escribe res:Mensaje4 .
+res:Mensaje4 rdf:type class:Mensaje .
+res:Mensaje4 prop:texto "In blandit ultrices enim." .
+res:Mensaje4 prop:tipoTweet "Normal" .
+res:Mensaje4 prop:fecha "2018-07-06"^^xsd:date .
+res:Mensaje4 prop:hashtag res:Hashtag1 .
+
+res:Usuario1 prop:escribe res:Mensaje5 .
+res:Mensaje5 rdf:type class:Mensaje .
+res:Mensaje5 prop:texto "In blandit ultrices enim." .
+res:Mensaje5 prop:tipoTweet "Reply" .
+res:Mensaje5 prop:fecha "2018-09-10"^^xsd:date .
+res:Mensaje5 prop:hashtag res:Hashtag1 .
+res:Mensaje5 prop:tweetOriginal res:Mensaje10 . 
+
+
+
+
+res:Usuario2 rdf:type class:Usuario .
+res:Usuario2 prop:nombreUsuario "hspellacy0" .
+res:Usuario2 prop:clave "CNIZO2Bnf" .
+res:Usuario2 prop:fechaRegistro "2015-12-06"^^xsd:date .
+res:Usuario2 prop:tipoPerfil "Privado"  .
+res:Usuario2 prop:estado "Activo"  .
+res:Usuario2 prop:ciudad res:Ciudad1 .
+
+res:Usuario2 prop:sigueA res:Usuario1 .
+res:Usuario2 prop:sigueA res:Usuario3 .
+res:Usuario2 prop:sigueA res:Usuario4 .
+res:Usuario2 prop:sigueA res:Usuario5 .
+
+
+
+res:Usuario2 prop:escribe res:Mensaje6 .
+res:Mensaje6 rdf:type class:Mensaje .
+res:Mensaje6 prop:texto "Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem." .
+res:Mensaje6 prop:tipoTweet "Normal" .
+res:Mensaje6 prop:fecha "2016-12-24"^^xsd:date .
+res:Mensaje6 prop:hashtag res:Hashtag5 .
+
+res:Usuario2 prop:escribe res:Mensaje7 .
+res:Mensaje7 rdf:type class:Mensaje .
+res:Mensaje7 prop:tipoTweet "Retweet" .
+res:Mensaje7 prop:fecha "2017-12-10"^^xsd:date .
+res:Mensaje7 prop:hashtag res:Hashtag4 .
+res:Mensaje7 prop:tweetOriginal res:Mensaje4 . 
+
+res:Usuario2 prop:escribe res:Mensaje8 .
+res:Mensaje8 rdf:type class:Mensaje .
+res:Mensaje8 prop:tipoTweet "Retweet" .
+res:Mensaje8 prop:fecha "2018-02-11"^^xsd:date .
+res:Mensaje8 prop:hashtag res:Hashtag3 .
+res:Mensaje8 prop:tweetOriginal res:Mensaje1 . 
+
+res:Usuario1 prop:escribe res:Mensaje9 .
+res:Mensaje9 rdf:type class:Mensaje .
+res:Mensaje9 prop:texto "Vivamus vestibulum sagittis sapien." .
+res:Mensaje9 prop:tipoTweet "Directed" .
+res:Mensaje9 prop:fecha "2018-03-08"^^xsd:date .
+res:Mensaje9 prop:hashtag res:Hashtag2 .
+res:Mensaje9 prop:destino res:Usuario1 .
+
+
+res:Usuario3 rdf:type class:Usuario .
+res:Usuario3 prop:nombreUsuario "bmartijn2" .
+res:Usuario3 prop:clave "nqvUUGTtA" .
+res:Usuario3 prop:fechaRegistro "2014-11-15"^^xsd:date .
+res:Usuario3 prop:tipoPerfil "Publico"  .
+res:Usuario3 prop:estado "Activo"  .
+res:Usuario3 prop:ciudad res:Ciudad1 .
+
+res:Usuario3 prop:sigueA res:Usuario1 .
+res:Usuario3 prop:sigueA res:Usuario5 .
+
+
+
+res:Usuario3 prop:escribe res:Mensaje10 .
+res:Mensaje10 rdf:type class:Mensaje .
+res:Mensaje10 prop:texto "Sed accumsan felis." .
+res:Mensaje10 prop:tipoTweet "Normal" .
+res:Mensaje10 prop:fecha "2018-10-05"^^xsd:date .
+res:Mensaje10 prop:hashtag res:Hashtag3 .
+
+res:Usuario3 prop:escribe res:Mensaje11 .
+res:Mensaje11 rdf:type class:Mensaje .
+res:Mensaje11 prop:texto "Sed accumsan felis." .
+res:Mensaje11 prop:tipoTweet "Directed" .
+res:Mensaje11 prop:fecha "2017-06-08"^^xsd:date .
+res:Mensaje11 prop:hashtag res:Hashtag2 .
+res:Mensaje11 prop:destino res:Usuario2 .
+
+
+
+res:Usuario4 rdf:type class:Usuario .
+res:Usuario4 prop:nombreUsuario "hogborne4" .
+res:Usuario4 prop:clave "4KcK93iBxVK" .
+res:Usuario4 prop:fechaRegistro "2014-01-02"^^xsd:date .
+res:Usuario4 prop:tipoPerfil "Publico"  .
+res:Usuario4 prop:estado "Activo"  .
+res:Usuario4 prop:ciudad res:Ciudad3 .
+
+res:Usuario4 prop:sigueA res:Usuario1 .
+res:Usuario4 prop:sigueA res:Usuario2 .
+
+
+res:Usuario4 prop:escribe res:Mensaje12 .
+res:Mensaje12 rdf:type class:Mensaje .
+res:Mensaje12 prop:texto "Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue." .
+res:Mensaje12 prop:tipoTweet "Normal" .
+res:Mensaje12 prop:fecha "2018-09-20"^^xsd:date .
+res:Mensaje12 prop:hashtag res:Hashtag5 .
+
+res:Usuario4 prop:escribe res:Mensaje14 .
+res:Mensaje14 rdf:type class:Mensaje .
+res:Mensaje14 prop:tipoTweet "Retweet" .
+res:Mensaje14 prop:fecha "2018-11-11"^^xsd:date .
+res:Mensaje14 prop:hashtag res:Hashtag4 .
+res:Mensaje14 prop:tweetOriginal res:Mensaje10 . 
+
+
+
+
+res:Usuario5 rdf:type class:Usuario .
+res:Usuario5 prop:nombreUsuario "bnorcliffe5" .
+res:Usuario5 prop:clave "C5uH0P" .
+res:Usuario5 prop:fechaRegistro "2017-08-06"^^xsd:date .
+res:Usuario5 prop:tipoPerfil "Publico"  .
+res:Usuario5 prop:estado "Activo"  .
+res:Usuario5 prop:ciudad res:Ciudad2 .
+
+res:Usuario5 prop:sigueA res:Usuario1 .
+
+
+
+res:Usuario5 prop:escribe res:Mensaje13 .
+res:Mensaje13 rdf:type class:Mensaje .
+res:Mensaje13 prop:texto "Hola." .
+res:Mensaje13 prop:tipoTweet "Reply" .
+res:Mensaje13 prop:fecha "2018-08-20"^^xsd:date .
+res:Mensaje13 prop:hashtag res:Hashtag1 .
+res:Mensaje13 prop:tweetOriginal res:Mensaje7 .
+
+
+

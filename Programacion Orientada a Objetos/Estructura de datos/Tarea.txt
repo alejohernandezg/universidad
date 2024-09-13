@@ -1,0 +1,205 @@
+#include <iostream>
+#include <vector>
+
+using namespace std;
+template <typename T>
+class nodo;
+
+template <typename T>
+class arcos{
+	float peso;
+	nodo<T>* sgte;
+public:
+	arcos();
+	~arcos();
+};
+
+template <typename T>
+class nodo{
+	T algo;
+	vector< arcos<T> > arc;
+public:
+	nodo();
+	~nodo();	
+};
+
+template <typename T>
+class Grafo{
+	vector< nodo<T> > nd;
+public:
+	 Grafo(int size):nd(size){}
+	~Grafo(){delete nd;}
+
+	//Modificadores
+	void insVertice(T dato);
+	void setVertice(int i, T dato);
+	void setArco(int i, int j, int costo);
+	void ElimArco(int i, int j);
+	Grafo(const Grafo<T> &original);
+
+	//Analizadoras
+	float costoArco(int i, int j);
+	T inforVertice(int i);
+	int tamano();
+	vector<T> predecesores(int i);
+	vector<T> sucesores(int i);
+
+	void ImprimirGrafo();
+
+	//sobrecarga
+	friend ostream& operator<<(ostream& os, const vector<T>& v){
+		for (int i = 0; i < v.size(); ++i)	{
+			os << " " << v[i];
+		}
+
+		/*os << "(";
+	    for (typename vector<T>::const_iterator ii = v.begin(); ii != v.end(); ++ii)    {
+	        os << " " << *ii;
+	    }
+	    os << ")";*/
+    	return os;
+	}
+
+	Grafo<T> operator=(Grafo<T> & gr){
+		gr.nd.clear();
+		for (int i = 0; i < nd.size(); ++i){
+			gr.nd.push_back(nd[i]);
+		}
+		return *this;
+	}
+	Grafo<T> operator[](unsigned int indice){
+		return nd[indice];		
+	}
+};
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////Modificadores///////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+template <typename T>
+void Grafo<T>::insVertice(T dato){
+	nodo<T> temp;
+	temp.algo = dato;
+	nd.push_back(temp);
+}
+
+template <typename T>
+void Grafo<T>::setVertice(int i, T dato){
+	nd[i].algo = dato;
+}
+
+template <typename T>
+void Grafo<T>::setArco(int i, int j, int costo){
+	if(i > nd.size()-1){
+		cout << "no existe tal nodo" << endl;
+		return;
+	}
+	else if(j > nd[i].arc.size()-1){
+		arcos<T> temp;
+		temp.sgte = &nd[j];
+		temp.peso = costo;
+		nd[i].arc.push_back(temp);
+	}else{
+		nd[i].AR[j].peso = costo;
+	}
+}
+
+template <typename T>
+void Grafo<T>::ElimArco(int i, int j){
+	if(i > nd.size()-1){
+		cout << "no existe tal nodo" << endl;
+		return;
+	}else if(j > nd[i].arc.size()-1){
+		cout << "No existe la arista" << endl;
+	}else{
+		nd[i].arc.erase(nd[i].arc.begin()+ nd[i].arc.size()-1);
+	}
+}
+
+template <typename T>
+Grafo<T>::Grafo(const Grafo &original): nd(original.nd){}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////Analizadores///////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+template <typename T>
+float Grafo<T>::costoArco(int i, int j){
+	if(i > nd.size()-1){
+		cout << "no existe tal nodo" << endl;
+		return -1;
+	}else if(j > nd[i].arc.size()-1){
+		return -1;
+	}else{
+		return nd[i].AR[j].peso;
+	}
+}
+
+
+template <typename T>
+T Grafo<T>::inforVertice(int i){
+	return nd[i].algo;
+}
+
+
+template <typename T>
+int Grafo<T>::tamano(){
+	return nd.size();
+}
+
+template <typename T>
+void Grafo<T>::ImprimirGrafo(){
+	bool paso= false;
+	int k;
+	for (int i = 0; i < nd.size(); ++i){
+		cout << "vertice "<< i+1 << ": ";
+		for (int j = 0; j < nd[i].arc.size(); ++j){
+			for (k = 0; k < nd.size(); ++k){
+				if(nd[i].AR[j].sgte.algo== nd[k].algo){
+					paso=true;
+					break;
+				}
+			}
+			if(paso == true){
+				cout << k+1 << "  ";
+			}
+		}
+		cout << endl;
+	}
+}
+
+template <typename T>
+vector<T> Grafo<T>::predecesores(int i){
+	vector<T> retornar;
+	int b = 0;
+	for (int k = 0; k < i; ++k){
+		for (int m = 0; m < nd[i].arc.size(); ++m){
+			if(nd[k].arc[m].sgte == nd[i]){
+				retornar.push_back(nd[k]);
+				break;
+			}
+		}
+		
+	}
+
+	for (int l = i+1; l < nd.size(); ++l){
+		for (int m = 0; m < nd[i].arc.size(); ++m){
+			if(nd[l].arc[m].sgte == nd[i]){
+				retornar.push_back(nd[l]);
+				break;
+			}
+		}
+	}
+
+	return retornar;
+}
+
+
+
+template <typename T>
+vector<T> Grafo<T>::sucesores(int i){
+	vector<T> retornar;
+	for (int a = 0; a < nd[i].arc.size(); ++a){
+		retornar.push_back(nd[i].arc[a].sgte);
+	}
+	return retornar;
+}

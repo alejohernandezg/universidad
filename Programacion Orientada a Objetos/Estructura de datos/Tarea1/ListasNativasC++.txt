@@ -1,0 +1,5 @@
+Las listas natias de se llaman Vector y funcionan como los arreglos al manejar los datos de una manera contigua, lo que 
+quiere decir que se puede acceder a estor por medio de punteros a sus elementos pero a diferencia de estos es que no se
+le conoce el tamaño definido y se le puede ir agregando los elementos que uno quiera. Haciendo que los vectores consuman
+una mayor cantidad de memoria a cambio de la capacidad para gestionar el almacenamiento y crecer de forma dinamica y 
+eficiente.

@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>creditoUsuario</class>
+ <widget class="QWidget" name="creditoUsuario">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>744</width>
+    <height>309</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>FondoTrabajadoresUnidos(Asociado)</string>
+  </property>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>70</y>
+     <width>692</width>
+     <height>181</height>
+    </rect>
+   </property>
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="7" column="1">
+     <spacer name="verticalSpacer">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>40</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item row="0" column="0" colspan="7">
+     <widget class="Line" name="line">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="2" colspan="2">
+     <widget class="QLineEdit" name="NombrEmpresa"/>
+    </item>
+    <item row="3" column="4">
+     <widget class="QLabel" name="label_5">
+      <property name="text">
+       <string>Telefono de la empresa:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="4" colspan="2">
+     <widget class="QLabel" name="label_4">
+      <property name="text">
+       <string>Ingresos mensuales familiares:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="6">
+     <widget class="QLineEdit" name="IngresosFamiliares"/>
+    </item>
+    <item row="2" column="0">
+     <widget class="QLabel" name="label">
+      <property name="text">
+       <string>Ingresos mensuales:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="5" colspan="2">
+     <widget class="QLineEdit" name="telefono"/>
+    </item>
+    <item row="3" column="0" colspan="2">
+     <widget class="QLabel" name="label_2">
+      <property name="text">
+       <string>Nombre de la empresa:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="0" colspan="7">
+     <widget class="Line" name="line_2">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="8" column="0">
+     <widget class="QLabel" name="label_7">
+      <property name="text">
+       <string>Total gastos:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="9" column="4" colspan="2">
+     <widget class="QLabel" name="label_6">
+      <property name="text">
+       <string>Numero de meses en el fondo:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="8" column="6">
+     <widget class="QLineEdit" name="totalPrestamo"/>
+    </item>
+    <item row="8" column="4" colspan="2">
+     <widget class="QLabel" name="label_8">
+      <property name="text">
+       <string>Valor total del prestamo:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="9" column="0" colspan="2">
+     <widget class="QLabel" name="label_9">
+      <property name="text">
+       <string>Plazo del credito(meses):</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="2" colspan="2">
+     <widget class="QLineEdit" name="ingresosMensuales"/>
+    </item>
+    <item row="5" column="0">
+     <spacer name="verticalSpacer_2">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>40</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item row="8" column="2">
+     <widget class="QLineEdit" name="totalGastos"/>
+    </item>
+    <item row="1" column="1">
+     <spacer name="verticalSpacer_3">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>40</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item row="9" column="2">
+     <widget class="QSpinBox" name="plazo">
+      <property name="maximum">
+       <number>48</number>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="0" colspan="2">
+     <widget class="QLabel" name="label_3">
+      <property name="text">
+       <string>Tiempo laborando en la empresa(meses):</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="2">
+     <widget class="QSpinBox" name="tiempoLaborando">
+      <property name="maximum">
+       <number>200</number>
+      </property>
+     </widget>
+    </item>
+    <item row="9" column="6">
+     <widget class="QSpinBox" name="mesesFondo">
+      <property name="minimum">
+       <number>0</number>
+      </property>
+      <property name="maximum">
+       <number>200</number>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>270</y>
+     <width>691</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QPushButton" name="pushButton">
+      <property name="text">
+       <string>Atras</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <spacer name="horizontalSpacer">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>40</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item>
+     <widget class="QPushButton" name="pushButton_2">
+      <property name="text">
+       <string>Mis creditos</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <spacer name="horizontalSpacer_2">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>40</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item>
+     <widget class="QPushButton" name="pushButton_3">
+      <property name="text">
+       <string>Simular credito</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="pushButton_4">
+      <property name="text">
+       <string>Generar solicitud de credito</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QLabel" name="label_10">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>20</y>
+     <width>401</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial Black</family>
+     <pointsize>10</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>FONDO TRABAJADORES UNIDOS: Creditos del usuario</string>
+   </property>
+  </widget>
+ </widget>
+ <tabstops>
+  <tabstop>ingresosMensuales</tabstop>
+  <tabstop>NombrEmpresa</tabstop>
+  <tabstop>IngresosFamiliares</tabstop>
+  <tabstop>telefono</tabstop>
+  <tabstop>totalGastos</tabstop>
+  <tabstop>totalPrestamo</tabstop>
+  <tabstop>pushButton</tabstop>
+  <tabstop>pushButton_2</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>

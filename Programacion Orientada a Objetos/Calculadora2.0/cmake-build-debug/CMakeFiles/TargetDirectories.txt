@@ -1,0 +1,3 @@
+C:/Users/ALEJANDRO/Desktop/calculadora2.0/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/ALEJANDRO/Desktop/calculadora2.0/cmake-build-debug/CMakeFiles/calculadora2_0.dir
+C:/Users/ALEJANDRO/Desktop/calculadora2.0/cmake-build-debug/CMakeFiles/edit_cache.dir
